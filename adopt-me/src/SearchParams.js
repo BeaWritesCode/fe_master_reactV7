@@ -45,7 +45,12 @@ const SearchParams = () => {
       <form onSubmit={DO_STUFF_IN_HERE}>
       and remove the value & onChange from the input below
       */}
-      <form>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          requestPets();
+        }}
+      >
         <label htmlFor="location">
           Location
           <input
